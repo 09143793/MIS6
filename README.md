@@ -28,7 +28,7 @@ and c.PrivilegeMasterKey=
                 from cf_user a  
                 where a.LoginName='test1')))
 ####查询结果：
-![用户test1可以查看到的页面]（https://github.com/09143793/MIS6/blob/master/6.1.png）
+![用户test1可以查看到的页面](https://github.com/09143793/MIS6/blob/master/6.1.png)
 ####伪代码：
 1.	根据用户的登录名test1在用户表里查对应的userId  
 2.	根据userId去权限表里查对应的访问人类型为user、访问对象类型为Menu的对应的MenuId  
@@ -63,7 +63,7 @@ where MenuNo=
                and PrivilegeAccess='Sys_Menu')) temp
  where MenuName='订单');
  ####查询结果
- ![用户test1 可对order页面进行的操作]（https://github.com/09143793/MIS6/blob/master/6.2.png）
+ ![用户test1 可对order页面进行的操作](https://github.com/09143793/MIS6/blob/master/6.2.png)<br/>
  ####伪代码：
  1.根据用户的登录名test1在用户表里查对应的userID.<br/>
  2.根据userID在权限表里查对应的访问人类性是user，访问对象类型是button的对应的buttonId<br/><br/>
