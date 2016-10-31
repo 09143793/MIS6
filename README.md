@@ -1,6 +1,6 @@
 # MIS6
 ### 查询用户test1可以查看的页面（Sys_menu）
-####查询语句：
+#### 查询语句：
 select d.MenuNo,d.MenuName  
 from sys_menu d  
 where d.MenuID in  
@@ -27,7 +27,7 @@ and c.PrivilegeMasterKey=
                     (select distinct a.UserID  
                 from cf_user a  
                 where a.LoginName='test1')))<br/>
-####查询结果：
+#### 查询结果：
 ![用户test1可以查看到的页面](https://github.com/09143793/MIS6/blob/master/6.1.png)<br/>
 ####伪代码：
 1.	根据用户的登录名test1在用户表里查对应的userId  
@@ -38,8 +38,8 @@ and c.PrivilegeMasterKey=
 6.	根据roleId去权限表里查对应的访问人类型为role、访问对象类型为Menu的对应的MenuId</br>
 7.	根据MenuId去菜单（页面）表里查对应的菜单（页面）名称MenuName</br>
 8.	将第三步得到的菜单（页面）名称与第七步得到的菜单（页面）名称取并集</br>
-<p>###查询test1 可以对order页面进行的操作</p>
-<p>####查询语句：</p>
+### 查询用户test1可以在order页面进行的操作
+#### 查询语句：
 <pre>
 SELECT * FROM sys_button
 where MenuNo=
@@ -63,9 +63,9 @@ where MenuNo=
                            where LoginName='test1')))
                and PrivilegeAccess='Sys_Menu')) temp
  where MenuName='订单');</pre>
- <p>查询结果</p>
+#### 查询结果
  ![用户test1 可对order页面进行的操作](https://github.com/09143793/MIS6/blob/master/6.2.png)<br/>
- ####伪代码：
+ #### 伪代码：
  1.根据用户的登录名test1在用户表里查对应的userID.<br/>
  2.根据userID在权限表里查对应的访问人类性是user，访问对象类型是button的对应的buttonId<br/><br/>
  3.根据页面名称order去菜单表里查找对应的meunNo.<br/>
