@@ -26,9 +26,9 @@ and c.PrivilegeMasterKey=
         where b.UserID=  
                     (select distinct a.UserID  
                 from cf_user a  
-                where a.LoginName='test1')))
+                where a.LoginName='test1')))<br/>
 ####查询结果：
-![用户test1可以查看到的页面](https://github.com/09143793/MIS6/blob/master/6.1.png)
+![用户test1可以查看到的页面](https://github.com/09143793/MIS6/blob/master/6.1.png)<br/>
 ####伪代码：
 1.	根据用户的登录名test1在用户表里查对应的userId  
 2.	根据userId去权限表里查对应的访问人类型为user、访问对象类型为Menu的对应的MenuId  
@@ -38,8 +38,8 @@ and c.PrivilegeMasterKey=
 6.	根据roleId去权限表里查对应的访问人类型为role、访问对象类型为Menu的对应的MenuId</br>
 7.	根据MenuId去菜单（页面）表里查对应的菜单（页面）名称MenuName</br>
 8.	将第三步得到的菜单（页面）名称与第七步得到的菜单（页面）名称取并集</br>
-###查询test1 可以对order页面进行的操作
-####查询语句：
+###查询test1 可以对order页面进行的操作<br/>
+####查询语句：<br/>
 SELECT * FROM sys_button
 where MenuNo=
 (select MenuNo
