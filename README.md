@@ -63,7 +63,7 @@ where MenuNo=
                            where LoginName='test1')))
                and PrivilegeAccess='Sys_Menu')) temp
  where MenuName='订单');</pre>
- <p>####查询结果</p>
+ <p>查询结果</p>
  ![用户test1 可对order页面进行的操作](https://github.com/09143793/MIS6/blob/master/6.2.png)<br/>
  ####伪代码：
  1.根据用户的登录名test1在用户表里查对应的userID.<br/>
