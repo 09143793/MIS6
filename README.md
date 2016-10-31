@@ -38,8 +38,9 @@ and c.PrivilegeMasterKey=
 6.	根据roleId去权限表里查对应的访问人类型为role、访问对象类型为Menu的对应的MenuId</br>
 7.	根据MenuId去菜单（页面）表里查对应的菜单（页面）名称MenuName</br>
 8.	将第三步得到的菜单（页面）名称与第七步得到的菜单（页面）名称取并集</br>
-### 查询用户test1可以在order页面进行的操作
-#### 查询语句：
+
+### 查询用户test1可以在order页面进行的操作<br/>
+#### 查询语句：<br/>
 <pre>
 SELECT * FROM sys_button
 where MenuNo=
