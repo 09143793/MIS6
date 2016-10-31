@@ -66,9 +66,9 @@ where MenuNo=
  where MenuName='订单');</pre>
 #### 查询结果
  ![用户test1 可对order页面进行的操作](https://github.com/09143793/MIS6/blob/master/6.2.png)<br/>
- #### 伪代码：
+ #### 伪代码：<br/>
  1.根据用户的登录名test1在用户表里查对应的userID.<br/>
- 2.根据userID在权限表里查对应的访问人类性是user，访问对象类型是button的对应的buttonId<br/><br/>
+ 2.根据userID在权限表里查对应的访问人类性是user，访问对象类型是button的对应的buttonId<br/>
  3.根据页面名称order去菜单表里查找对应的meunNo.<br/>
  4.根据menuNo和buttonId在按钮表里查对应的操作名称buttonName<br/>
  5.根据用户的登录名test1在用户表里查对应的userID。<br/>
